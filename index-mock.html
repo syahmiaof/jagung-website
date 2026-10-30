@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#041a16" />
+    <meta name="description" content="A desktop WebGL study of Pioneer Corn Revolution." />
+  </head>
+  <body>
+    <main id="experience" class="experience" aria-live="off">
+      <canvas id="world" aria-hidden="true"></canvas>
+      <div class="world-wash" aria-hidden="true"></div>
+      <div class="world-grain" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <button class="menu-toggle" type="button" aria-label="Open story menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="brand" href="#home" aria-label="Pioneer home">
+          <svg viewBox="0 0 40 32" aria-hidden="true">
+            <path d="M20 2 37 9v10c0 6-7 10-17 12C10 29 3 25 3 19V9L20 2Z" />
+            <path d="M11 20c3-5 6-6 9-2 3-4 6-3 9 2-4 0-6 2-9 5-3-3-5-5-9-5Z" />
+            <path d="M20 11v14" />
+          </svg>
+          <strong>PIONEER</strong>
+        </a>
+        <a class="corteva" href="https://www.corteva.com/" target="_blank" rel="noreferrer">Corteva<span>agriscience</span></a>
+      </header>
+
+      <section class="scene-copy" aria-live="polite">
+        <div class="copy-stack">
+          <p class="eyebrow" data-eyebrow></p>
+          <h1 data-title></h1>
+          <p class="description" data-description></p>
+          <div class="condition-picker" data-condition-picker aria-label="Select a field condition"></div>
+        </div>
+        <button class="orbit-cta" type="button" data-cta>
+          <span data-cta-label></span>
+          <i aria-hidden="true"></i>
+        </button>
+      </section>
+
+      <nav class="chapter-rail" aria-label="Story chapters">
+        <span class="rail-label" data-rail-label></span>
+        <div class="rail-dots" data-rail-dots></div>
+      </nav>
+
+      <div class="scroll-cue" data-scroll-cue>
+        <span class="scroll-line"></span>
+        <span>SCROLL TO DISCOVER</span>
+      </div>
+
+      <div class="scene-counter" aria-hidden="true"><span data-counter>01</span><b>/</b><span>06</span></div>
+      <div class="loader" data-loader><span class="loader-mark">P</span><span>Loading your experience</span><i><b></b></i></div>
+
+      <aside class="story-menu" aria-hidden="true">
+        <div class="menu-head"><span>EXPLORE THE STORY</span><button class="menu-close" type="button" aria-label="Close story menu">×</button></div>
+        <div class="menu-grid">
+          <div class="chapter-list">
+            <button class="chapter-link" type="button" data-jump="1"><small>CHAPTER 1</small><strong>SCIENCE</strong></button>
+            <button class="chapter-link" type="button" data-jump="2"><small>CHAPTER 2</small><strong>REAL WORLD<br />TESTING</strong></button>
+            <button class="chapter-link" type="button" data-jump="5"><small>CHAPTER 3</small><strong>RESULT</strong></button>
+          </div>
+          <div class="menu-actions">
+            <button type="button" data-menu-action="newsletter">SIGN UP FOR NEWS</button>
+            <button type="button" data-menu-action="contact">CONTACT A TERRITORY MANAGER</button>
+            <button type="button" data-menu-action="legal">LEGAL AND TRADEMARK</button>
+            <a href="https://go.pioneer.com/cornrevolution-podcast" target="_blank" rel="noreferrer">VISIT CORN REVOLUTION PODCAST</a>
+          </div>
+        </div>
+        <footer class="menu-footer">
+          <a href="https://www.pioneer.com/" target="_blank" rel="noreferrer">VISIT PIONEER.COM</a>
+          <a href="https://www.pioneer.com/home/site/about/terms-of-use" target="_blank" rel="noreferrer">TERMS &amp; CONDITIONS</a>
+          <a href="https://www.pioneer.com/us/privacy-policy.html" target="_blank" rel="noreferrer">PRIVACY POLICY</a>
+          <a href="https://www.corteva.us/california-privacy-rights.html" target="_blank" rel="noreferrer">CALIFORNIA PRIVACY RIGHTS</a>
+        </footer>
+      </aside>
+
+      <aside class="library-story" aria-hidden="true">
+        <button class="library-close" type="button" data-library-close aria-label="Close library story">×</button>
+        <div class="library-copy">
+          <p>BEGIN WITH THE BEST GERMPLASM</p>
+          <h2>FROM BILLIONS<br />OF POSSIBILITIES,<br /><em>WE PICK THE BEST.</em></h2>
+          <div class="library-rule"></div>
+          <p class="library-body">Impeccable pedigree records let breeders trace genetic lines back to the earliest inbred development program, then select the combinations with the greatest potential.</p>
+          <span class="library-footnote">SCIENCE · PIONEER CORN DEVELOPMENT</span>
+        </div>
+      </aside>
+
+      <div class="notice" data-notice role="status"></div>
+      <div class="sound-toggle" aria-hidden="true"><span></span><span></span><span></span></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "ui-jagung",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pioneer Corn Revolution - Rebuilt Interactive WebGL Experience with full assets and codebase",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "gsap": "2.1.3",
+    "three": "0.102.1"
+  }
+}
