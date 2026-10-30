@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1160" viewBox="0 0 1600 1160" role="img" aria-labelledby="title description">
+  <title id="title">Syahmiaof logo typography mockups</title>
+  <desc id="description">Three typography directions for the SYAHMIAOF wordmark. The hexagon and leaf symbol stays consistent.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1c14" />
+      <stop offset="1" stop-color="#030806" />
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1b15" />
+      <stop offset="1" stop-color="#09110d" />
+    </linearGradient>
+    <symbol id="brand-mark" viewBox="0 0 56 64">
+      <path d="M28 1 54 16v32L28 63 2 48V16L28 1Z" fill="#f2f4ef" />
+      <path d="M28 13c-8 8-9 14-7 20 1 5 4 9 7 13 3-4 6-8 7-13 2-6 1-12-7-20Z" fill="none" stroke="#0b1711" stroke-width="2.1" stroke-linejoin="round" />
+      <path d="M28 17v25M21 30c3 2 5 5 7 9m7-9c-3 2-5 5-7 9" fill="none" stroke="#0b1711" stroke-width="1.6" stroke-linecap="round" />
+    </symbol>
+    <style>
+      .eyebrow { font: 700 13px 'Segoe UI', Arial, sans-serif; letter-spacing: 3px; fill: #a0b2a7; }
+      .heading { font: 700 48px 'Segoe UI', Arial, sans-serif; letter-spacing: -1.5px; fill: #f4f5f1; }
+      .option { font: 700 14px 'Segoe UI', Arial, sans-serif; letter-spacing: 2px; fill: #d7dfd9; }
+      .spec { font: 400 12px 'Segoe UI', Arial, sans-serif; letter-spacing: 1.3px; fill: #83968a; }
+      .preview-label { font: 600 10px 'Segoe UI', Arial, sans-serif; letter-spacing: 1.8px; fill: #708278; }
+      .wordmark { fill: #f2f4ef; }
+      .mini { fill: #f2f4ef; }
+      .rule { stroke: #293a30; stroke-width: 1; }
+    </style>
+  </defs>
+  <rect width="1600" height="1160" fill="url(#background)" />
+  <circle cx="1260" cy="-60" r="460" fill="#123321" opacity=".12" />
+  <text x="96" y="80" class="eyebrow">SYAHMIAOF  /  WORDMARK STUDY</text>
+  <text x="96" y="145" class="heading">3 arah tipografi</text>
+  <text x="1504" y="137" class="spec" text-anchor="end">Ikon hexagon + daun dikekalkan</text>
+
+  <g transform="translate(80 195)">
+    <rect width="1440" height="280" rx="18" fill="url(#card)" stroke="#26382e" />
+    <text x="40" y="44" class="option">01  /  TECH COMPACT</text>
+    <text x="40" y="68" class="spec">BAHNSCHRIFT  ·  66 PX  ·  TRACKING RAPAT  ·  TEKNIKAL</text>
+    <g transform="translate(42 112)"><use href="#brand-mark" width="58" height="66" /></g>
+    <text x="120" y="165" class="wordmark" font-family="Bahnschrift, 'Arial Narrow', sans-serif" font-size="66" font-weight="700" letter-spacing="-1.5">SYAHMIAOF</text>
+    <line x1="1030" y1="88" x2="1030" y2="240" class="rule" />
+    <text x="1070" y="117" class="preview-label">HEADER  /  22 PX</text>
+    <g transform="translate(1070 146)"><use href="#brand-mark" width="22" height="25" /></g>
+    <text x="1101" y="165" class="mini" font-family="Bahnschrift, 'Arial Narrow', sans-serif" font-size="23" font-weight="700" letter-spacing="-.55">SYAHMIAOF</text>
+    <text x="1070" y="214" class="preview-label">LOADER  /  40 PX</text>
+    <g transform="translate(1070 229) scale(.48)"><use href="#brand-mark" width="56" height="64" /></g>
+    <text x="1102" y="261" class="mini" font-family="Bahnschrift, 'Arial Narrow', sans-serif" font-size="39" font-weight="700" letter-spacing="-.8">SYAHMIAOF</text>
+  </g>
+
+  <g transform="translate(80 495)">
+    <rect width="1440" height="280" rx="18" fill="url(#card)" stroke="#26382e" />
+    <text x="40" y="44" class="option">02  /  BOLD GEOMETRIC</text>
+    <text x="40" y="68" class="spec">ARIAL BLACK  ·  57 PX  ·  PALING TEBAL  ·  MUDAH DIBACA</text>
+    <g transform="translate(42 112)"><use href="#brand-mark" width="58" height="66" /></g>
+    <text x="120" y="164" class="wordmark" font-family="Arial Black, Arial, sans-serif" font-size="57" font-weight="900" letter-spacing="-1.8">SYAHMIAOF</text>
+    <line x1="1030" y1="88" x2="1030" y2="240" class="rule" />
+    <text x="1070" y="117" class="preview-label">HEADER  /  22 PX</text>
+    <g transform="translate(1070 146)"><use href="#brand-mark" width="22" height="25" /></g>
+    <text x="1101" y="165" class="mini" font-family="Arial Black, Arial, sans-serif" font-size="20" font-weight="900" letter-spacing="-.65">SYAHMIAOF</text>
+    <text x="1070" y="214" class="preview-label">LOADER  /  40 PX</text>
+    <g transform="translate(1070 229) scale(.48)"><use href="#brand-mark" width="56" height="64" /></g>
+    <text x="1102" y="261" class="mini" font-family="Arial Black, Arial, sans-serif" font-size="35" font-weight="900" letter-spacing="-1">SYAHMIAOF</text>
+  </g>
+
+  <g transform="translate(80 795)">
+    <rect width="1440" height="280" rx="18" fill="url(#card)" stroke="#26382e" />
+    <text x="40" y="44" class="option">03  /  MODERN WIDE</text>
+    <text x="40" y="68" class="spec">SEGOE UI  ·  61 PX  ·  SPACING LUAS  ·  PREMIUM</text>
+    <g transform="translate(42 112)"><use href="#brand-mark" width="58" height="66" /></g>
+    <text x="120" y="163" class="wordmark" font-family="Segoe UI, Arial, sans-serif" font-size="61" font-weight="700" letter-spacing="2.4">SYAHMIAOF</text>
+    <line x1="1030" y1="88" x2="1030" y2="240" class="rule" />
+    <text x="1070" y="117" class="preview-label">HEADER  /  22 PX</text>
+    <g transform="translate(1070 146)"><use href="#brand-mark" width="22" height="25" /></g>
+    <text x="1101" y="165" class="mini" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing=".75">SYAHMIAOF</text>
+    <text x="1070" y="214" class="preview-label">LOADER  /  40 PX</text>
+    <g transform="translate(1070 229) scale(.48)"><use href="#brand-mark" width="56" height="64" /></g>
+    <text x="1102" y="261" class="mini" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" letter-spacing="1.1">SYAHMIAOF</text>
+  </g>
+</svg>

@@ -177,16 +177,41 @@
                 document.body.appendChild(script);
             }
         </script>
-            <!-- Language Switcher + Brand Bar by Syahmi AOF -->
-        <div id="syahmi-lang-bar" style="position:fixed;top:16px;right:16px;z-index:9999;display:flex;gap:8px;align-items:center;background:rgba(0,0,0,0.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.2);border-radius:28px;padding:8px 18px;font-family:Arial,sans-serif;box-shadow:0 4px 24px rgba(0,0,0,0.5);font-weight:700;letter-spacing:0.04em;">
-            <button onclick="syahmiSetLang('ms')" id="btn-ms" title="Bahasa Melayu" style="background:none;border:none;color:white;cursor:pointer;font-size:13px;padding:2px 4px;border-radius:4px;transition:opacity .2s;font-weight:700">🇲🇾 BM</button>
-            <span style="color:rgba(255,255,255,0.25);font-size:11px">|</span>
-            <button onclick="syahmiSetLang('en')" id="btn-en" title="English" style="background:none;border:none;color:white;cursor:pointer;font-size:13px;padding:2px 4px;border-radius:4px;transition:opacity .2s;font-weight:700">🇬🇧 EN</button>
-            <span style="color:rgba(255,255,255,0.25);font-size:11px">|</span>
-            <a href="https://github.com/syahmiaof/jagung-website" target="_blank" rel="noopener" title="GitHub Repo" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.3px">GitHub</a>
-            <span style="color:rgba(255,255,255,0.25);font-size:11px">|</span>
-            <a href="https://syahmiaof.my" target="_blank" rel="noopener" title="Portfolio Syahmi AOF" style="color:#ffffff;text-decoration:none;font-size:14px;font-weight:800;letter-spacing:.5px">syahmiaof.my</a>
+            <!-- Compact language switcher -->
+        <div id="syahmi-lang-bar" aria-label="Language" style="position:fixed;top:16px;right:16px;bottom:auto;z-index:9999;display:flex;gap:3px;align-items:center;background:rgba(0,0,0,0.38);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.16);border-radius:24px;padding:4px;font-family:Arial,sans-serif;box-shadow:0 4px 20px rgba(0,0,0,0.24);">
+            <button onclick="syahmiSetLang('ms')" id="btn-ms" aria-pressed="false" title="Bahasa Melayu" style="background:none;border:none;color:white;cursor:pointer;font-size:12px;padding:5px 9px;border-radius:18px;transition:background .2s,opacity .2s;font-weight:600">BM</button>
+            <button onclick="syahmiSetLang('en')" id="btn-en" aria-pressed="false" title="English" style="background:none;border:none;color:white;cursor:pointer;font-size:12px;padding:5px 9px;border-radius:18px;transition:background .2s,opacity .2s;font-weight:600">ENG</button>
         </div>
+        <a id="syahmi-home-button" href="#" aria-label="Back to homepage" title="Back to homepage" style="display:none;position:fixed;top:16px;right:164px;z-index:10000;align-items:center;justify-content:center;padding:9px 13px;border:1px solid rgba(255,255,255,0.2);border-radius:24px;background:rgba(0,0,0,0.38);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 4px 20px rgba(0,0,0,0.24);color:#fff;font:700 12px Arial,sans-serif;letter-spacing:.04em;text-decoration:none;">← HOME</a>
+        <script>
+            (function(){
+                var homeButton = document.getElementById('syahmi-home-button');
+                var menuOpen = false;
+                function renderHomeButton() {
+                    if (homeButton) homeButton.style.display = menuOpen ? 'inline-flex' : 'none';
+                }
+                document.addEventListener('click', function(event){
+                    if (event.target.closest && event.target.closest('.menuBtn')) {
+                        menuOpen = !menuOpen;
+                        renderHomeButton();
+                    } else if (event.target.closest && event.target.closest('.menu__navListItem')) {
+                        menuOpen = false;
+                        renderHomeButton();
+                    }
+                }, true);
+                window.addEventListener('hashchange', function(){
+                    menuOpen = false;
+                    renderHomeButton();
+                });
+                if (homeButton) homeButton.addEventListener('click', function(event){
+                    event.preventDefault();
+                    menuOpen = false;
+                    renderHomeButton();
+                    if (window.syahmiGoHome) window.syahmiGoHome();
+                });
+                renderHomeButton();
+            })();
+        </script>
         <script>
             (function(){
                 var LANG_KEY = 'syahmi_jagung_lang';
@@ -198,10 +223,18 @@
                 function updateBtns(lang) {
                     var ms = document.getElementById('btn-ms');
                     var en = document.getElementById('btn-en');
-                    if (ms) ms.style.opacity = lang === 'ms' ? '1' : '0.45';
-                    if (en) en.style.opacity = lang === 'en' ? '1' : '0.45';
-                    if (ms) ms.style.fontWeight = lang === 'ms' ? 'bold' : 'normal';
-                    if (en) en.style.fontWeight = lang === 'en' ? 'bold' : 'normal';
+                    if (ms) {
+                        ms.style.opacity = lang === 'ms' ? '1' : '0.72';
+                        ms.style.background = lang === 'ms' ? 'rgba(255,255,255,0.16)' : 'transparent';
+                        ms.style.fontWeight = lang === 'ms' ? '700' : '500';
+                        ms.setAttribute('aria-pressed', String(lang === 'ms'));
+                    }
+                    if (en) {
+                        en.style.opacity = lang === 'en' ? '1' : '0.72';
+                        en.style.background = lang === 'en' ? 'rgba(255,255,255,0.16)' : 'transparent';
+                        en.style.fontWeight = lang === 'en' ? '700' : '500';
+                        en.setAttribute('aria-pressed', String(lang === 'en'));
+                    }
                 }
                 var _lang = localStorage.getItem(LANG_KEY) || 'ms';
                 window.syahmiSetLang = syahmiSetLang;
