@@ -192,6 +192,11 @@
                 }
                 document.addEventListener('click', function(event){
                     if (event.target.closest && event.target.closest('.menuBtn')) {
+                        if (window.syahmiHomeIntent) {
+                            menuOpen = false;
+                            renderHomeButton();
+                            return;
+                        }
                         menuOpen = !menuOpen;
                         renderHomeButton();
                     } else if (event.target.closest && event.target.closest('.menu__navListItem')) {
@@ -207,7 +212,16 @@
                     event.preventDefault();
                     menuOpen = false;
                     renderHomeButton();
-                    if (window.syahmiGoHome) window.syahmiGoHome();
+                    if (window.syahmiGoHome) {
+                        window.syahmiHomeIntent = true;
+                        try {
+                            var menuToggle = document.querySelector('.menuBtn');
+                            if (menuToggle) menuToggle.click();
+                        } finally {
+                            window.syahmiHomeIntent = false;
+                        }
+                        window.syahmiGoHome();
+                    }
                 });
                 renderHomeButton();
             })();
