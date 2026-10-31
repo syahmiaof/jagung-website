@@ -39,7 +39,6 @@
 - **Three.js Scene Graph**: Custom procedural mesh generation for crop stalks, root structures, and dynamic wind vertex displacement shaders.
 - **GSAP Orchestration**: Multi-stage chapter progression with stateful camera morphing and buttery smooth narrative transitions.
 - **Asset Pipeline**: High-density compressed WebP textures and optimized geometry buffers served via edge-ready static delivery.
-- **Technical Analysis**: For mathematical modeling, shader pipeline analysis, and canvas architecture, see **[BEDAH_TEKNIKAL.md](BEDAH_TEKNIKAL.md)**.
 
 ---
 

@@ -362,7 +362,7 @@ async function runTestSuite() {
     const defaultPort = parseInt(portMatch[1], 10);
     assert(
       defaultPort === 4180,
-      `Expected server.js default PORT to be 4180, but found ${defaultPort}. Alignment required per User Prompt & BEDAH_TEKNIKAL.md.`
+      `Expected server.js default PORT to be 4180, but found ${defaultPort}. Alignment required per architecture specification.`
     );
   });
 
